@@ -16,7 +16,6 @@
 
         {{-- main content --}}
         <main>
-            <h1 class="text-center">welcome</h1>
             @yield('content')
         </main>
 
