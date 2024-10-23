@@ -4,20 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{ $title }}</title>
+        @yield("additional-meta")
+        <title>@yield("page-title", "laravel-comics")</title>
 
-        @vite(['resources/js/app.js', 'resources/css/app.css'])
+        @yield("additional-cdn")
     </head>
-    <body>
-        {{-- header --}}
-        @include('partials.header')
 
-        {{-- main content --}}
-        <main>
-            @yield('content')
-        </main>
+<body>
+    {{-- header --}}
+    @include('partials.header', ['listLinks' => $listLinks])
 
-        {{-- footer --}}
-        @include('partials.footer')
-    </body>
+    {{-- main content --}}
+    <main>
+        <h1 class="text-center">welcome</h1>
+        @yield('content')
+    </main>
+
+    {{-- footer --}}
+    @include('partials.footer')
+    @vite(['resources/js/app.js', 'resources/scss/app.scss'])
+</body>
 </html>
