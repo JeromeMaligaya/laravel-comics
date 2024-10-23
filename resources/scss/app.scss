@@ -17,18 +17,7 @@ ul {
 }
 
 
-
-/*btn*/
-.btn {
-    border-radius: 20px;
-    border-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*utilities*/
-
+// header
 #main-header {
     #nav-header {
         display: flex;
@@ -67,7 +56,34 @@ ul {
         background-size: cover;
         height: 300px;
     }
+}
 
+// footer
+#main-footer {
+    #footer-links {
+        background-image: url('~resources/img/footer-bg.jpg');
+        padding: 30px 0;
 
+        .container {
+            display: flex;
 
+            .card-footer h3 {
+                display: inline-block;
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            .card-footer {
+                padding: 0 15px;
+
+                ul {
+                    padding: 0;
+                }
+
+                li a {
+                    color: #999;
+                }
+            }
+        }
+    }
 }

@@ -10,18 +10,19 @@
         @yield("additional-cdn")
     </head>
 
-<body>
-    {{-- header --}}
-    @include('partials.header', ['listLinks' => $listLinks])
+    <body>
+        {{-- header --}}
+        @include('partials.header', ['listLinks' => $listLinks])
 
-    {{-- main content --}}
-    <main>
-        <h1 class="text-center">welcome</h1>
-        @yield('content')
-    </main>
+        {{-- main content --}}
+        <main>
+            <h1 class="text-center">welcome</h1>
+            @yield('content')
+        </main>
 
-    {{-- footer --}}
-    @include('partials.footer')
-    @vite(['resources/js/app.js', 'resources/scss/app.scss'])
-</body>
+        {{-- footer --}}
+        @include('partials.footer', ['footerListLinks' => $footerListLinks])
+        @vite(['resources/js/app.js', 'resources/scss/app.scss'])
+    </body>
+
 </html>
