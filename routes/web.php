@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $title = "boolean laravel-10-template";
     $listLinks = config('db.listLinks');
+    $footerListLinks = config('db.footerListLinks');
 
 
-    return view('layouts.app', compact("title", "listLinks"));
-})->name("listLinks");
+    return view('layouts.app', compact("title", "listLinks", "footerListLinks"));
+})->name("route-app");
