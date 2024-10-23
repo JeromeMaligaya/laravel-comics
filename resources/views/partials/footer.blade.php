@@ -1,4 +1,4 @@
-<footer id="main-footer">
+<footer id="app-footer">
     <div id="footer-links">
         <div class="container">
             @foreach ($footerListLinks as $item)

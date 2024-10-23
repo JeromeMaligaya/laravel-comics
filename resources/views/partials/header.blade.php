@@ -1,4 +1,4 @@
-<header id="main-header">
+<header id="app-header">
     <div class="container">
         <div id="nav-header">
             {{-- logo --}}
