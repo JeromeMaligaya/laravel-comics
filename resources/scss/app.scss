@@ -1,1 +1,64 @@
 @use "~bootstrap/scss/bootstrap" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/*btn*/
+.btn {
+    border-radius: 20px;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*utilities*/
+
+#main-header {
+    #nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        .img-box {
+            width: 75px;
+        }
+
+        nav,
+        .img-box {
+            height: 75px;
+        }
+
+        #list-links,
+        #list-links li {
+            height: 100%;
+        }
+
+        #list-links,
+        li {
+            display: flex;
+            align-items: center;
+        }
+
+        #list-links li {
+            padding: 15px;
+        }
+    }
+
+}
