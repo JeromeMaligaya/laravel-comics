@@ -13,11 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/app', function () {
     $title = "boolean laravel-10-template";
     $listLinks = config('db.listLinks');
     $footerListLinks = config('db.footerListLinks');
 
 
     return view('layouts.app', compact("title", "listLinks", "footerListLinks"));
-})->name("route-app");
+})->name("route-layoutsApp");
+
+
+
+Route::get('/comics', function () {
+    $comicsList = config('db.comicsList');
+
+    return view('comics.index', compact("comicsList"));
+})->name("route-comicsIndex");
