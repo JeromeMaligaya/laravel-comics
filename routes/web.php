@@ -29,3 +29,16 @@ Route::get('/comics', function () {
 
     return view('comics.index', compact("comicsList"));
 })->name("route-comicsIndex");
+
+Route::get('/comics/{index}', function (string $index) {
+    $comicsList = config('db.comicsList');
+    // dd($index);
+
+    if (isset($comicsList[$index])) {
+        $comic = $comicsList[$index];
+        // dd($comic);
+        return view('comics.show', compact("comic"));
+    } else {
+        abort(404);
+    }
+})->name("route-comicShow");
